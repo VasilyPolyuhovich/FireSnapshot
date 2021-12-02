@@ -14,13 +14,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = "FireSnapshot/Sources/Core/**/*.swift"
-    ss.dependency "Firebase/Firestore", "~> 6.12"
-    ss.dependency "FirebaseFirestoreSwift", "~> 0.2"
+    ss.dependency "Firebase/Firestore"
+    ss.dependency "FirebaseFirestoreSwift"
   end
 
   s.subspec 'Storage' do |ss|
     ss.source_files = "FireSnapshot/Sources/Storage/*.swift"
     ss.dependency "FireSnapshot/Core"
-    ss.dependency "Firebase/Storage", "~> 6.12"
+    ss.dependency "Firebase/Storage"
   end
 end
