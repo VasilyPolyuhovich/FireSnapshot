@@ -44,7 +44,7 @@ public final class Snapshot<D>: SnapshotType where D: SnapshotData {
     }
 
     public convenience init(snapshot: DocumentSnapshot) throws {
-        guard let data = try snapshot.data(as: D.self), snapshot.exists else {
+        guard let data = try? snapshot.data(as: D.self), snapshot.exists else {
             throw SnapshotError.notExists
         }
 
